@@ -22,11 +22,12 @@ for file in files:
   padded_zeroes = "000" + match.group(2)
   #Creates new file
   new_file = f"PWP2024_{padded_zeroes}A_ANAY{match.group(3)}"
-  #Renames the files after joining the paths
+  #Saves the old path
   old_filepath = os.path.join(path, file)
   while isduplicate:
     #Checks if there are duplicates in the file
     try:
+    #If there are no duplicates, renames the files and saves it
       new_filepath = os.path.join(path, new_file)
       os.rename(old_filepath, new_filepath)
       f.writelines(file+","+new_file+"\n")
