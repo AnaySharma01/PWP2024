@@ -6,7 +6,7 @@ import os
 f = open("saved_file.csv","+w")
  
 #Creates an array of the files 
-path = 'C:/Users/anays/Downloads/copy'
+path = 'C:/Users/anays/Downloads/PWP2022'
 files = os.listdir(path)
 
 #Loops through the array of files
